@@ -1,8 +1,12 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:nfcpay/login_page.dart';
 
 import 'introScreen.dart';
 
-void main() {
+Future main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const app());
 }
 
@@ -15,7 +19,7 @@ class app extends StatelessWidget {
       initialRoute: '/',
       routes: {
     '/': (context) => const introScreen(),
-    //'/second': (context) => const SecondScreen(),
+    '/login': (context) => const login_page(),
   },
     );
   }

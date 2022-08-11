@@ -48,7 +48,9 @@ class introScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(16.0)),
                 minimumSize: Size(height / 5, width / 7), //////// HERE
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, '/login');
+              },
               child: Text('Get Started'),
             )
           ],

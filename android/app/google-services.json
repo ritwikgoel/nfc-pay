@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "788093549111",
+    "project_id": "nfcpay-e91a3",
+    "storage_bucket": "nfcpay-e91a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788093549111:android:7c8cc1316cbc53655a5db2",
+        "android_client_info": {
+          "package_name": "com.example.nfcpay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "788093549111-o4019atk88iddu8ebjg5ij9amp66d3v3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8zGLBREBKJcI8GOXhb2sm4cAMkECANMk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "788093549111-o4019atk88iddu8ebjg5ij9amp66d3v3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
