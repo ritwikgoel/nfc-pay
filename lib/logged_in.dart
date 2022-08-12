@@ -11,9 +11,10 @@ class loggedin extends StatelessWidget {
   Widget build(BuildContext context) {
     final user = FirebaseAuth.instance.currentUser!;
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 45, 61, 155),
       body: Column(
         children: [
-          Text("$user"),
+          Text("${user.email}"),
           ElevatedButton(
               onPressed: () {
                 FirebaseAuth.instance.signOut();

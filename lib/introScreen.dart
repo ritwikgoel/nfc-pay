@@ -2,15 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:lottie/lottie.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
 
-class introScreen extends StatelessWidget {
+class introScreen extends StatefulWidget {
   const introScreen({super.key});
 
+  @override
+  State<introScreen> createState() => _introScreenState();
+}
+
+class _introScreenState extends State<introScreen> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-
+    //var user = FirebaseAuth.instance.currentUser!;
+    //print(user.email);
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 45, 61, 155),
       body: SingleChildScrollView(
@@ -52,7 +63,9 @@ class introScreen extends StatelessWidget {
                 Navigator.pushNamed(context, '/login');
               },
               child: Text('Get Started'),
-            )
+            ),
+            SizedBox(height: height/23),
+            //Text("${user.email}",),
           ],
         ),
       ),
