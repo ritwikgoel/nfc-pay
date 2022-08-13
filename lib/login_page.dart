@@ -102,7 +102,9 @@ class _login_pageState extends State<login_page> {
                       ),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, "/signup");
+                      },
                       child: Text("Create Account"),
                     )
                   ],
@@ -124,6 +126,6 @@ class _login_pageState extends State<login_page> {
         email: namecontroller.text.trim(),
         password: passcontroller.text.trim());
 
-navigatorkey.currentState!.popUntil((route) => route.isFirst);
+    navigatorkey.currentState!.popUntil((route) => route.isFirst);
   }
 }

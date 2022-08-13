@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:nfcpay/login_page.dart';
+import 'package:nfcpay/signup.dart';
 
 import 'introScreen.dart';
 
@@ -23,6 +24,7 @@ class app extends StatelessWidget {
       routes: {
         '/': (context) => const introScreen(),
         '/login': (context) => const login_page(),
+        '/signup': (context) => const signup(),
       },
     );
   }

@@ -64,7 +64,7 @@ class _introScreenState extends State<introScreen> {
               },
               child: Text('Get Started'),
             ),
-            SizedBox(height: height/23),
+            SizedBox(height: height / 23),
             //Text("${user.email}",),
           ],
         ),
