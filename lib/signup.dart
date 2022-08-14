@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -125,6 +127,9 @@ class _signupState extends State<signup> {
   }
 
   Future signUp() async {
+    if (passcontroller != passcontroller2) {
+      exit(0);
+    }
     showDialog(
         context: context,
         barrierDismissible: false,
