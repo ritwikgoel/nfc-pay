@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:nfc_manager/nfc_manager.dart';
+import 'package:nfc_in_flutter/nfc_in_flutter.dart';
 
 class upi_trans extends StatefulWidget {
   const upi_trans({super.key});
@@ -14,15 +14,10 @@ class _upi_transState extends State<upi_trans> {
   @override
   Widget build(BuildContext context) {
     Future<void> nfcFunc() async {
-      bool isNFCAvailable = await NfcManager.instance.isAvailable();
-      if (isNFCAvailable == true) {
-        NfcManager.instance.startSession(
-          onDiscovered: (NfcTag tag) async {
-            print(tag.data.values);
-            NfcManager.instance.stopSession();
-          },
-        );
-      }
+      Stream<NDEFMessage> stream = NFC.readNDEF();
+      stream.listen((NDEFMessage message) {
+        print("records: ${message.records.length}");
+      });
     }
 
     return Scaffold(
