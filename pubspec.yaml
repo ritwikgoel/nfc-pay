@@ -25,7 +25,11 @@ dependencies:
   cloud_firestore: ^3.4.4
   firebase_auth: ^3.6.3
   firebase_core: ^1.20.1
-  nfc_in_flutter: ^2.0.5
+  upi_india: ^3.0.1
+
+
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

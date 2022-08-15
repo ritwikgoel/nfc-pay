@@ -26,7 +26,7 @@ class app extends StatelessWidget {
         '/': (context) => const introScreen(),
         '/login': (context) => const login_page(),
         '/signup': (context) => const signup(),
-        '/upi_init': (context) => const upi_trans(),
+        '/upi_init': (context) => const upi_main(),
       },
     );
   }
